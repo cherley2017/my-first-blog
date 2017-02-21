@@ -3,5 +3,6 @@ from django.utils import timezone
 from .models import Post
 # Create your views here.
 def post_list(request):
-    posts = Post.objects.filter(author='admin')
+    me = User.objects.get(username='admin')
+    posts = Post.objects.filter(author=me)
     return render(request, 'blog/post_list.html', {'posts': posts})
