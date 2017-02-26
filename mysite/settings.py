@@ -84,10 +84,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'cherley2017$default',
-        'USER': 'admin',
-        'PASSWORD': 'cherley2017',
-        'HOST': 'cherley2017.mysql.pythonanywhere-services.com',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': /home/cherley2017/my-first-blog/db.sqlite3
     }
 }
 
